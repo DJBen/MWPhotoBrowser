@@ -1105,6 +1105,9 @@
 
     if (_gridController) return;
     
+    // Send delegate message
+    [_delegate photoBrowserDidShowGrid:self];
+    
     // Init grid controller
     _gridController = [[MWGridViewController alloc] init];
     _gridController.initialContentOffset = _currentGridContentOffset;
